@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center bg-dark" style="margin-bottom: 500px">
+        <div class="form-group">
+            <!-- Bài tập 1:Cho người dùng nhập vào 3 số nguyên. Viết chương trình xuất 3 số theo thứ tự tăng dần -->
+            <div class="card">
+                <div class="card-top">
+                    <h3 class="text-center">📚 Xuất 3 số theo thứ tự tăng dần</h3>
+                </div>
+                <div class="card-body row">
+                    <div class="col-4">
+                        <input class="form-control" id="nhapSo1" placeholder="Nhập số thứ 1">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" id="nhapSo2" placeholder="Nhập số thứ 2">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" id="nhapSo3" placeholder="Nhập số thứ 3">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary" id="btnSapXep">Sắp Xếp</button>
+                </div>
+                <div class="alert alert-success mt-3 mx-3" id="xuat3So"></div>
+            </div>
+            <br>
+            <!-- Bài tập 2: Viết chương trình “Chào hỏi” các thành viên trong gia đình với các đặc điểm. Đầu tiên máy sẽ
+            hỏi ai sử dụng máy. Sau đó dựa vào câu trả lời và đưa ra lời chào phù hợp. Giả sử trong gia
+            đình có 4 thành viên: Bố (B), Mẹ (M), anh Trai (A) và Em gái (E) -->
+            <div class="card">
+                <div class="card-top">
+                    <h3 class="text-center">👋 Chương trình "Chào hỏi"</h3>
+                </div>
+                <div class="card-body d-flex">
+                    <select class="form-control" id="chonThanhVien" name="" style="width: 30%; margin-right: 20px">
+                        <option value="">Chọn thành viên</option>
+                        <option value="B">Bố</option>
+                        <option value="M">Mẹ</option>
+                        <option value="A">Anh Trai</option>
+                        <option value="E">Em Gái</option>
+                    </select>
+                    <button class="btn btn-primary w-30" id="btnGuiLoiChao">Gửi lời chào</button>
+                </div>
+                <div class="alert alert-success mx-3" id="loiChao">
+
+                </div>
+            </div>
+            <br>
+            <!-- Bài tập 3: Cho 3 số nguyên. Viết chương trình xuất ra có bao nhiêu số lẻ và bao nhiêu số chẵn. -->
+            <div class="card">
+                <div class="card-top">
+                    <h3 class="text-center">🧮 Đếm số chẵn lẻ</h3>
+                </div>
+                <div class="card-body row">
+                    <div class="col-4">
+                        <input class="form-control" id="nhapSo_1" placeholder="Nhập số thứ 1">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" id="nhapSo_2" placeholder="Nhập số thứ 2">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" id="nhapSo_3" placeholder="Nhập số thứ 3">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary" id="btnDem">Đếm</button>
+                </div>
+                <div class="alert alert-success mt-3 mx-3" id="xuatChanLe"></div>
+            </div>
+            <br>
+            <!-- bài tập 4:Viết chương trình cho nhập 3 cạnh của tam giác. Hãy cho biết đó là tam giác gì?
+            Ví dụ: a=2, b=2, c=1 => Tam giác cân
+            • a = 3, b=3 c=3 => Tam giác đều
+            • a = 3, b = 4, c=5 => Tam giác vuông (đinh lý Pytago) -->
+            <div class="card">
+                <div class="card-top">
+                    <h3 class="text-center">🔮 Đoán hình tam giác</h3>
+                </div>
+                <div class="card-body row">
+                    <div class="col-4">
+                        <input class="form-control" id="nhapDoDai_1" placeholder="Nhập độ dài cạnh 1">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" id="nhapDoDai_2" placeholder="Nhập độ dài cạnh 2">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" id="nhapDoDai_3" placeholder="Nhập độ dài cạnh 3">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary" id="btnDuDoan">Dự Đoán</button>
+                </div>
+                <div class="alert alert-success mt-3 mx-3" id="doanHinh"></div>
+            </div>
+            <br>
+            <!-- Bài tập 5: Viết chương trình nhập vào ngày, tháng, năm (Giả sử nhập đúng, không cần kiểm tra hợp lệ).
+            Tìm ngày, tháng, năm của ngày tiếp theo. Tương tự tìm ngày tháng năm của ngày trước đó.  -->
+            <div class="card">
+                <div class="card-top">
+                    <h3 class="text-center">📅 Tính ngày tháng năm</h3>
+                </div>
+                <div class="card-body row">
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="nhapNgay" placeholder="Nhập Ngày">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="nhapThang" placeholder="Nhập Tháng">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="nhapNam" placeholder="Nhập Năm">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary" id="btnNgayHomQua" style="margin-right: 20px">Ngày Hôm Qua</button>
+                    <button class="btn btn-primary" id="btnNgayMai">Ngày Mai</button>
+                </div>
+                <div class="alert alert-success mt-3 mx-3" id="ketQua_5"></div>
+            </div>
+            <br>
+            <!-- Bài tập 6: Viết chương trình nhập vào tháng, năm. Cho biết tháng đó có bao nhiêu ngày. (bao gồm tháng
+            của năm nhuận) -->
+            <div class="card">
+                <div class="card-top">
+                    <h3 class="text-center">🗓️ Tính ngày</h3>
+                </div>
+                <div class="card-body row">
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="nhapThang_6" placeholder="Nhập Tháng">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="nhapNam_6" placeholder="Nhập Năm">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-primary" id="btnTinhNgay_6">Tính Ngày</button>
+                    </div>
+                </div>
+                <div class="alert alert-success mt-3 mx-3" id="ketQua_6">
+
+                </div>
+            </div>
+            <br>
+            <!-- Bài tập 7: Viết chương trình nhập vào số nguyên có 3 chữ số. In ra cách đọc nó. -->
+            <div class="card">
+                <div class="card-top">
+                    <h3 class="text-center">🔢 Đọc số</h3>
+                </div>
+                <div class="card-body row">
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="nhapSo_7" placeholder="Nhập số 3 chữ số">
+                    </div>
+                    <div class="col-8">
+                        <button class="btn btn-primary" id="btnDocSo">Đọc số</button>
+                    </div>
+                </div>
+                <div class="alert alert-success mt-3 mx-3" id="ketQua_7">
+
+                </div>
+            </div>
+            <br>
+            <!-- bài tập 8: Cho biết tên và tọa độ nhà của 3 sinh viên. Cho biết tọa độ của trường đại học. Viết chương
+            trình in tên sinh viên xa trường nhấ -->
+            <div class="card">
+                <div class="card-top">
+                    <h3 class="text-center">🗺️ Tìm sinh viên xa trường nhất</h3>
+                </div>
+                <div class="card-body">
+                    <h4>Sinh Viên 1</h4>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <input type="text" id="nhapTenSV_1" class="form-control" placeholder="Nhập tên">
+                        </div>
+                        <div class="col-4">
+                            <input type="number" id="nhapToaDoX_1" class="form-control" placeholder="Nhập tọa độ x">
+                        </div>
+                        <div class="col-4">
+                            <input type="number" id="nhapToaDoY_1" class="form-control" placeholder="Nhập tọa độ y">
+                        </div>
+                    </div>
+                    <h4>Sinh Viên 2</h4>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <input type="text" id="nhapTenSV_2" class="form-control" placeholder="Nhập tên">
+                        </div>
+                        <div class="col-4">
+                            <input type="number" id="nhapToaDoX_2" class="form-control" placeholder="Nhập tọa độ x">
+                        </div>
+                        <div class="col-4">
+                            <input type="number" id="nhapToaDoY_2" class="form-control" placeholder="Nhập tọa độ y">
+                        </div>
+                    </div>
+                    <h4>Sinh Viên 3</h4>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <input type="text" id="nhapTenSV_3" class="form-control" placeholder="Nhập tên">
+                        </div>
+                        <div class="col-4">
+                            <input type="number" id="nhapToaDoX_3" class="form-control" placeholder="Nhập tọa độ x">
+                        </div>
+                        <div class="col-4">
+                            <input type="number" id="nhapToaDoY_3" class="form-control" placeholder="Nhập tọa độ y">
+                        </div>
+                    </div>
+                    <h4>Trường học</h4>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <input type="number" id="nhapToaDoX_4" class="form-control" placeholder="Nhập tọa độ x">
+                        </div>
+                        <div class="col-4">
+                            <input type="number" id="nhapToaDoY_4" class="form-control" placeholder="Nhập tọa độ y">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <button class="btn btn-primary" id="btnTim">Tìm</button>
+                    </div>
+                    <div class="alert alert-success mt-3" id="ketQua_8">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>
