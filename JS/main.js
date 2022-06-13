@@ -79,7 +79,7 @@ document.getElementById('btnDuDoan').onclick = function () {
     var canh1 = Number(document.getElementById('nhapDoDai_1').value);
     var canh2 = Number(document.getElementById('nhapDoDai_2').value);
     var canh3 = Number(document.getElementById('nhapDoDai_3').value);
-    //output: ketQua: String
+    //output: String
     var ketQua = '';
     //progress
     if (canh1 == canh2 && canh1 == canh3) {
@@ -106,7 +106,150 @@ document.getElementById('btnDuDoan').onclick = function () {
 //Bài tập 5: Viết chương trình nhập vào ngày, tháng, năm (Giả sử nhập đúng, không cần kiểm tra hợp lệ).
 // Tìm ngày, tháng, năm của ngày tiếp theo. Tương tự tìm ngày tháng năm của ngày trước đó.
 document.getElementById('btnNgayHomQua').onclick = function () {
-    //input: 
+    //input: ngay: number, thang:number, nam:number
+    var ngay = Number(document.getElementById('nhapNgay').value);
+    var thang = Number(document.getElementById('nhapThang').value);
+    var nam = Number(document.getElementById('nhapNam').value);
+    //output: string
+    //xử lí
+    if (thang === 1 && ngay > 1 && ngay <= 31) {
+        ngay -= 1;
+    } else if (thang === 2 && ngay > 1 && ngay <= 28) {
+        ngay -= 1;
+    } else if (thang === 3 && ngay > 1 && ngay <= 31) {
+        ngay -= 1;
+    } else if (thang === 4 && ngay > 1 && ngay <= 30) {
+        ngay -= 1;
+    } else if (thang === 5 && ngay > 1 && ngay <= 31) {
+        ngay -= 1;
+    } else if (thang === 6 && ngay > 1 && ngay <= 30) {
+        ngay -= 1;
+    } else if (thang === 7 && ngay > 1 && ngay <= 30) {
+        ngay -= 1;
+    } else if (thang === 8 && ngay > 1 && ngay <= 31) {
+        ngay -= 1;
+    } else if (thang === 9 && ngay > 1 && ngay <= 30) {
+        ngay -= 1;
+    } else if (thang === 10 && ngay > 1 && ngay <= 31) {
+        ngay -= 1;
+    } else if (thang === 11 && ngay > 1 && ngay <= 30) {
+        ngay -= 1;
+    } else if (thang === 12 && ngay > 1 && ngay <= 31) {
+        ngay -= 1;
+    } else if (ngay === 1 && thang === 1) {
+        ngay = 31;
+        thang = 12;
+        nam -= 1;
+    } else if (ngay === 1 && thang === 2) {
+        ngay = 31;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 3) {
+        ngay = 28;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 4) {
+        ngay = 31;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 5) {
+        ngay = 30;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 6) {
+        ngay = 31;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 7) {
+        ngay = 30;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 8) {
+        ngay = 31;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 9) {
+        ngay = 31;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 10) {
+        ngay = 30;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 11) {
+        ngay = 31;
+        thang -= 1;
+    } else if (ngay === 1 && thang === 12) {
+        ngay = 30;
+        thang -= 1;
+    } else {
+        document.getElementById('ketQua_5').innerHTML = alert('nhập sai ngày hoặc tháng')
+    }
+    document.getElementById('ketQua_5').innerHTML = ngay + '/' + thang + '/' + nam;
+}
+document.getElementById('btnNgayMai').onclick = function () {
+    //input: ngay: number, thang:number, nam:number
+    var ngay = Number(document.getElementById('nhapNgay').value);
+    var thang = Number(document.getElementById('nhapThang').value);
+    var nam = Number(document.getElementById('nhapNam').value);
+    //output: ketQua5: String
+    if (thang === 1 && ngay >= 1 && ngay <= 30) {
+        ngay += 1;
+    } else if (thang === 2 && ngay >= 1 && ngay <= 27) {
+        ngay += 1;
+    } else if (thang === 3 && ngay >= 1 && ngay <= 30) {
+        ngay += 1;
+    } else if (thang === 4 && ngay >= 1 && ngay <= 29) {
+        ngay += 1;
+    } else if (thang === 5 && ngay >= 1 && ngay <= 30) {
+        ngay += 1;
+    } else if (thang === 6 && ngay >= 1 && ngay <= 29) {
+        ngay += 1;
+    } else if (thang === 7 && ngay >= 1 && ngay <= 30) {
+        ngay += 1;
+    } else if (thang === 8 && ngay >= 1 && ngay <= 30) {
+        ngay += 1;
+    } else if (thang === 9 && ngay >= 1 && ngay <= 29) {
+        ngay += 1;
+    } else if (thang === 10 && ngay >= 1 && ngay <= 30) {
+        ngay += 1;
+    } else if (thang === 11 && ngay >= 1 && ngay <= 29) {
+        ngay += 1;
+    } else if (thang === 12 && ngay >= 1 && ngay <= 30) {
+        ngay += 1;
+    } else if (ngay === 31 && thang === 1) {
+        ngay = 1;
+        thang = 2;
+    } else if (ngay === 28 && thang === 2) {
+        ngay = 1;
+        thang = 3;
+    } else if (ngay === 31 && thang === 3) {
+        ngay = 1;
+        thang = 4;
+    } else if (ngay === 30 && thang === 4) {
+        ngay = 1;
+        thang = 5;
+    } else if (ngay === 31 && thang === 5) {
+        ngay = 1;
+        thang = 6;
+    } else if (ngay === 30 && thang === 6) {
+        ngay = 1;
+        thang = 7;
+    } else if (ngay === 31 && thang === 7) {
+        ngay = 1;
+        thang = 8;
+    } else if (ngay === 31 && thang === 8) {
+        ngay = 1;
+        thang = 9;
+    } else if (ngay === 30 && thang === 9) {
+        ngay = 1;
+        thang = 10;
+    } else if (ngay === 31 && thang === 10) {
+        ngay = 1;
+        thang = 11;
+    } else if (ngay === 30 && thang === 11) {
+        ngay = 1;
+        thang = 12;
+    } else if (ngay === 31 && thang === 12) {
+        ngay = 1;
+        thang = 1;
+        nam += 1
+    }else {
+        document.getElementById('ketQua_5').innerHTML = alert('nhập sai ngày hoặc tháng')
+    }
+
+    document.getElementById('ketQua_5').innerHTML = ngay + '/' + thang + '/' + nam;
 }
 
 
@@ -290,11 +433,11 @@ document.getElementById('btnTim').onclick = function () {
     //xử lí
     //công thức tính khoảng cách khi biết tọa độ x,y của 2 điểm: gọi d là khoảng cách => d = Math.sqrt(Math.pow(x1-x2) + Math.pow(y1-y2));
     //khoảng cách từ sinh viên 1 đến trường học là d1
-    var d1 = Math.sqrt(Math.pow(x4 - x1) + Math.pow(y4 - y1));
+    var d1 = Math.sqrt(Math.pow(x4, 2) - 2 * x4 * x1 + Math.pow(x1, 2) + Math.pow(y4, 2) - 2 * y4 * y1 + Math.pow(y1, 2));
     //khoảng cách từ sinh viên 2 đến trường học là d2
-    var d2 = Math.sqrt(Math.pow(x4 - x2) + Math.pow(y4 - y2));
+    var d2 = Math.sqrt(Math.pow(x4, 2) - 2 * x4 * x2 + Math.pow(x2, 2) + Math.pow(y4, 2) - 2 * y4 * y2 + Math.pow(y2, 2));
     //khoảng cách từ sinh viên 3 đến trường học là d3
-    var d3 = Math.sqrt(Math.pow(x4 - x3) + Math.pow(y4 - y3));
+    var d3 = Math.sqrt(Math.pow(x4, 2) - 2 * x4 * x3 + Math.pow(x3, 2) + Math.pow(y4, 2) - 2 * y4 * y3 + Math.pow(y3, 2));
     if (d1 > d2 && d2 > d3) {
         nameXaTruongNhat = name1;
     } else if (d1 > d3 && d1 > d2) {
@@ -307,8 +450,8 @@ document.getElementById('btnTim').onclick = function () {
         nameXaTruongNhat = name3;
     } else if (d3 > d2 && d3 > d1) {
         nameXaTruongNhat = name3;
-    }// } else {
-    //     nameXaTruongNhat = name3;
-    // }
+    } else {
+        nameXaTruongNhat = name3;
+    }
     document.getElementById('ketQua_8').innerHTML = 'sinh viên xa trường nhất: ' + nameXaTruongNhat;
 }
